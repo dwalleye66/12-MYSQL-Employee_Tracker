@@ -1,5 +1,5 @@
 {
-  "name": "12-mysql-employee_tracker",
+  "name": "12_mysql_employee_tracker",
   "version": "1.0.0",
   "description": "Application to create, change, and view workforce",
   "main": "emptrack.js",
