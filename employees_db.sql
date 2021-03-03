@@ -3,7 +3,7 @@ DROP DATABASE IF EXISTS employee_tracker_db;
 CREATE DATABASE employee_tracker_db;
 
 Use employee_tracker_db;
-
+git status
 CREATE TABLE department (
 department_id INT auto_increment NOT NULL PRIMARY KEY, 
 name VARCHAR(30) NOT NULL
