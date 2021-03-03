@@ -20,14 +20,15 @@ CREATE TABLE employee(
 id INT AUTO_INCREMENT PRIMARY KEY NOT NULL, 
 first_name VARCHAR(30) NOT NULL, 
 last_name VARCHAR(30) NOT NULL, 
-role_id INT NOT NULL, 
+role_id INT NOT NULL,
+manager_id INT 
 );
 
 INSERT INTO department (name)
 VALUES ("Sales");
 
 INSERT INTO role (title, salary, department_id)
-VALUES ("Con Artist", 75000 , 1);
+VALUES ("Legal Team Lead", 250000 , 4);
 
-INSERT INTO employee (first_name, last_name, role_id)
-VALUES ("Darin", "Wallace", 1);
+INSERT INTO employee (first_name, last_name, role_id, manager_id)
+VALUES ("Jessica", "Johnston", 2,  );
