@@ -98,6 +98,11 @@ function addEmp() {
           type: "input",
           message: "What is this employee's role ID?",
         },
+        {
+          name: "manager",
+          type: "input",
+          message: "What is the managers ID?"
+        }
       ])
       .then(function (answer) {
         connection.query(
@@ -106,6 +111,7 @@ function addEmp() {
             first_name: answer.firstname,
             last_name: answer.lastname,
             role_id: answer.role,
+            manager_id: answer.manager
           },
           function (err) {
             if (err) throw err;
