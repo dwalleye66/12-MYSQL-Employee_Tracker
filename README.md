@@ -24,8 +24,7 @@
   ## Usage
 
   Enter "node server" into the Terminal's command line while in the repository.
-  <img src="assets\Employee-Tracker.png" alt="screenshot"/>
-  <img src="assets\Employee-Tracker.gif>
+  
   view the demonstration here (https://youtu.be/_d_iFsrVHtU)
 
   ## Tests
