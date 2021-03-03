@@ -20,21 +20,22 @@ connection.connect(function (err) {
 
 function start() {
   inquirer
-    .prompt({
-      name: "purpose",
-      type: "list",
-      message: "What would you like to do?",
-      choices: [
-        "View all Employees",
-        "View all Departments",
-        "View all Roles",
-        "Add Employee",
-        "Add Role",
-        "Add Department",
-        "Update Employee Role",
-        "Done",
-      ],
-    })
+    .prompt(
+      {
+        name: "purpose",
+        type: "list",
+        message: "What would you like to do?",
+        choices: [
+          "View all Employees",
+          "View all Departments",
+          "View all Roles",
+          "Add Employee",
+          "Add Role",
+          "Add Department",
+          "Update Employee Role",
+          "Done",
+        ],
+      })
     .then(function (answer) {
       if (answer.purpose === "View all Employees") {
         viewAllEmp();
@@ -61,22 +62,23 @@ function start() {
 function viewAllEmp() {
   connection.query("SELECT * FROM employee", function (err, results) {
     console.table(results);
+    start();
   });
-  start();
 }
 
 function viewAllDept() {
   connection.query("SELECT * FROM department", function (err, results) {
     console.table(results);
+    start();
   });
-  start();
+  
 }
 
 function viewAllRoles() {
   connection.query("SELECT * FROM role", function (err, results) {
     console.table(results);
-  });
-  start();
+    start();
+  });  
 }
 
 function addEmp() {
