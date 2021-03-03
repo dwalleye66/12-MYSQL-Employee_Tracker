@@ -1,4 +1,5 @@
 const mysql = require("mysql");
+const util = requires("util")
 
 const connection = mysql.createConnection({
     host: "localhost",
@@ -7,5 +8,6 @@ const connection = mysql.createConnection({
     password: "password",
     database: "employee_tracker_db"
 });
-
+connection.connect();
+connection.query = util.promisify(connection.query);
 module.exports = connection;
